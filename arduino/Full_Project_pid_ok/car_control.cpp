@@ -311,9 +311,16 @@ void PID()
   last_output_2=output_2;
   last_output_3=output_3;
   last_output_4=output_4;
-
+  
+  E1_1=E_1;
+  E1_2=E_2;
+  E1_3=E_3;
+  E1_4=E_4;
+  
   E2_1=E1_1;
   E2_2=E1_2;
   E2_3=E1_3;
   E2_4=E1_4;
+
+  
 }
