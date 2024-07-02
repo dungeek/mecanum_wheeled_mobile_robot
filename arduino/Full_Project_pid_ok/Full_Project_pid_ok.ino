@@ -195,7 +195,11 @@ void carFollowWall()
   frontIR=digitalRead(50);
   backwardIR=digitalRead(51);
   usDistance=ultrasonicRead();
-  if(usDistance<AVOID_DISTANCE) carStop();
+  if(usDistance<AVOID_DISTANCE)
+  {
+    carMove(0,0,-power+10);
+    delay(1000);
+  }
   else if(!frontIR && !backwardIR) carLeftForward(power-10);
   else if(frontIR && !backwardIR) carMove(0,0,-power+10);
   else if(!frontIR && backwardIR) carMove(0,0,power-10);
